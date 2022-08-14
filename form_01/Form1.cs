@@ -10,19 +10,20 @@ public partial class Form1 : Form
         InitializeComponent();
     }
 
-    private async void action_ClickAsync(object sender, EventArgs e)
-    {
-        string result = await Form1.Get(url);
-        Debug.WriteLine($"DBG:{result}");
-    }
-
     private void action_Click(object sender, EventArgs e)
     {
-        string result = Form1.Get2(url);
+        string result = Form1.Get(url);
         Debug.WriteLine($"DBG:{result}");
     }
 
-    public static string Get2(string url) {
+    private async void action_ClickAsync(object sender, EventArgs e)
+    {
+        string result = await Form1.GetAsync(url);
+        Debug.WriteLine($"DBG:{result}");
+    }
+
+
+    public static string Get(string url) {
         string result = "";
 
         HttpClient httpClient = new HttpClient();
@@ -64,7 +65,7 @@ public partial class Form1 : Form
 
     }
 
-    public static async Task<string> Get(string url) {
+    public static async Task<string> GetAsync(string url) {
         string result = "";
 
         HttpClient httpClient = new HttpClient();
