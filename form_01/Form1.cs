@@ -3,7 +3,7 @@ namespace form_01;
 
 public partial class Form1 : Form
 {
-    private string url = "https://lightbox.sakura.ne.jp/demo/json/syain_json.ph";
+    private string url = "https://lightbox.sakura.ne.jp/demo/json/syain_json.php";
 
     public Form1()
     {
