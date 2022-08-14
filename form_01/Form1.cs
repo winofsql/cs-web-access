@@ -68,7 +68,7 @@ public partial class Form1 : Form
 
     }
 
-    // 非同期処理用( async が必要 )
+    // 非同期処理用( async が必要 / 非同期メソッドの戻り値の型は、void、Task、Task<T> )
     public static async Task<string> GetAsync(string url) {
         string result = "";
 
