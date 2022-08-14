@@ -10,12 +10,14 @@ public partial class Form1 : Form
         InitializeComponent();
     }
 
+    // 同期処理用( いままでどおり )
     private void action_Click(object sender, EventArgs e)
     {
         string result = Form1.Get(url);
         Debug.WriteLine($"DBG:{result}");
     }
 
+    // 非同期処理用( async が必要 )
     private async void action_ClickAsync(object sender, EventArgs e)
     {
         string result = await Form1.GetAsync(url);
@@ -23,6 +25,7 @@ public partial class Form1 : Form
     }
 
 
+    // 同期処理用( いままでどおり )
     public static string Get(string url) {
         string result = "";
 
@@ -65,6 +68,7 @@ public partial class Form1 : Form
 
     }
 
+    // 非同期処理用( async が必要 )
     public static async Task<string> GetAsync(string url) {
         string result = "";
 
