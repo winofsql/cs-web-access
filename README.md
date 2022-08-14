@@ -6,3 +6,4 @@
 
 [await 演算子](https://docs.microsoft.com/ja-jp/dotnet/csharp/language-reference/operators/await)
 
+![image](https://user-images.githubusercontent.com/1501327/184522360-4be5cc2a-723f-4c63-8101-2ee62d3eb706.png)
